@@ -9,6 +9,11 @@ import { Content } from '../helper-files/content-interface';
 export class ContentListComponent {
   contentsArray: Content[];
 
+  logId(getContent: any){
+    console.log(`ID: ${getContent.id}`);
+    console.log(`Title: ${getContent.title}`);
+  }
+
   constructor(){
     this.contentsArray = [
     {
