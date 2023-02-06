@@ -1,1 +1,9 @@
-<p>content-list works!</p>
+<div *ngFor="let content of contentsArray | slice: 0:5">
+    <div class="c-card">
+        <h1 [innerHTML]="content.title"></h1>
+        <p [innerHTML]="content.description"></p>
+        <p [innerHTML]="content.creator"></p>
+        <p [innerHTML]="content.type"></p>
+        <img src="{{content.imgURL}}">
+    </div>
+</div>
