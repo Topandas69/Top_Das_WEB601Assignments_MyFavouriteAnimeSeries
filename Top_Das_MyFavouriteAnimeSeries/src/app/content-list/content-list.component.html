@@ -4,6 +4,6 @@
         <p [innerHTML]="content.description"></p>
         <p [innerHTML]="content.creator"></p>
         <p [innerHTML]="content.type"></p>
-        <img src="{{content.imgURL}}">
+        <img src="{{content.imgURL}}" (click)="logId(content)">
     </div>
 </div>
