@@ -1,3 +1,14 @@
+<div>
+    <input type="text" [(ngModel)]="searchTitle" placeholder="Search Title">
+    <button (click)="searchByTitle()">Search</button>
+</div>
+<div *ngIf="isTitleExist !== null" >
+    <p [style.color]="isTitleExist ? 'green': 'red'">
+        {{isTitleExist ? 'Title Found' : 'No title found'}}
+    </p>
+</div>
+
+
 <div class="no-type">
     <h1>No Type</h1>
     <div *ngFor="let content of contentsArray | contentType">

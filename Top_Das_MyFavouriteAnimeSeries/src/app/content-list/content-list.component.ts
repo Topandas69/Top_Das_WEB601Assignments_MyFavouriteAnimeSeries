@@ -8,10 +8,16 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentListComponent {
   contentsArray: Content[];
+  searchTitle: string = '';
+  isTitleExist: boolean | null = null;
 
   logId(getContent: any){
     console.log(`ID: ${getContent.id}`);
     console.log(`Title: ${getContent.title}`);
+  }
+
+  searchByTitle(){
+    this.isTitleExist = this.contentsArray.some(content => content.title === this.searchTitle);
   }
 
   constructor(){
