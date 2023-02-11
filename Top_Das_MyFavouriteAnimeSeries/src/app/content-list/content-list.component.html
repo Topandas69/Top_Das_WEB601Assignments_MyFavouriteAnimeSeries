@@ -1,9 +1,38 @@
-<div *ngFor="let content of contentsArray | slice: 0:5">
-    <div class="c-card">
-        <h1 [innerHTML]="content.title"></h1>
-        <p [innerHTML]="content.description"></p>
-        <p [innerHTML]="content.creator"></p>
-        <p [innerHTML]="content.type"></p>
-        <img src="{{content.imgURL}}" (click)="logId(content)">
+<div>
+    <h1>No Type</h1>
+    <div *ngFor="let content of contentsArray | contentType">
+        <div class="c-card">
+            <h1 [innerHTML]="content.title"></h1>
+            <p [innerHTML]="content.description"></p>
+            <p [innerHTML]="content.creator"></p>
+            <p [innerHTML]="content.type"></p>
+            <img src="{{content.imgURL}}" (click)="logId(content)">
+        </div>
+    </div>
+</div>
+
+<div>
+    <h1>Action Type</h1>
+    <div *ngFor="let content of contentsArray | contentType:'Action'">
+        <div class="c-card">
+            <h1 [innerHTML]="content.title"></h1>
+            <p [innerHTML]="content.description"></p>
+            <p [innerHTML]="content.creator"></p>
+            <p [innerHTML]="content.type"></p>
+            <img src="{{content.imgURL}}" (click)="logId(content)">
+        </div>
+    </div>
+</div>
+
+<div>
+    <h1>Thriller Type</h1>
+    <div *ngFor="let content of contentsArray | contentType:'Thriller'">
+        <div class="c-card">
+            <h1 [innerHTML]="content.title"></h1>
+            <p [innerHTML]="content.description"></p>
+            <p [innerHTML]="content.creator"></p>
+            <p [innerHTML]="content.type"></p>
+            <img src="{{content.imgURL}}" (click)="logId(content)">
+        </div>
     </div>
 </div>
