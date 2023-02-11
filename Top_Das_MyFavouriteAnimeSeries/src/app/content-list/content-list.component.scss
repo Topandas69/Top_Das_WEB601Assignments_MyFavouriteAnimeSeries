@@ -7,3 +7,18 @@
     width: 250px;
     max-width: 100%;
 }
+
+.no-type .c-card{
+    color: blue;
+    background-color: gray;
+}
+
+.action-type .c-card{
+    color: red;
+    background-color: yellow;
+}
+
+.thriller-type .c-card{
+    color: green;
+    background-color: magenta;
+}
