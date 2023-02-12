@@ -17,7 +17,12 @@
             <p [innerHTML]="content.description"></p>
             <p [innerHTML]="content.creator"></p>
             <p [innerHTML]="content.type"></p>
-            <img src="{{content.imgURL}}" (click)="logId(content)">
+            <div *ngIf="content.imgURL; else noImage">
+                <img [src]="content.imgURL" (click)="logId(content)">
+            </div>
+            <ng-template #noImage>
+                <img src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId(content)">
+            </ng-template>
         </div>
     </div>
 </div>
@@ -30,7 +35,12 @@
             <p [innerHTML]="content.description"></p>
             <p [innerHTML]="content.creator"></p>
             <p [innerHTML]="content.type"></p>
-            <img src="{{content.imgURL}}" (click)="logId(content)">
+            <div *ngIf="content.imgURL; else noImage">
+                <img [src]="content.imgURL" (click)="logId(content)">
+            </div>
+            <ng-template #noImage>
+                <img src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId(content)">
+            </ng-template>
         </div>
     </div>
 </div>
@@ -43,7 +53,12 @@
             <p [innerHTML]="content.description"></p>
             <p [innerHTML]="content.creator"></p>
             <p [innerHTML]="content.type"></p>
-            <img src="{{content.imgURL}}" (click)="logId(content)">
+            <div *ngIf="content.imgURL; else noImage">
+                <img [src]="content.imgURL" (click)="logId(content)">
+            </div>
+            <ng-template #noImage>
+                <img src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId(content)">
+            </ng-template>
         </div>
     </div>
 </div>
