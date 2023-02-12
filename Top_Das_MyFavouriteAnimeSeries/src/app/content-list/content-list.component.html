@@ -16,7 +16,7 @@
             <h1 [innerHTML]="content.title"></h1>
             <p [innerHTML]="content.description"></p>
             <p [innerHTML]="content.creator"></p>
-            <p [innerHTML]="content.type"></p>
+            <p [innerHTML]="content.type" appHoverAffect></p>
             <div *ngIf="content.imgURL; else noImage">
                 <img [src]="content.imgURL" (click)="logId(content)">
             </div>
@@ -34,7 +34,7 @@
             <h1 [innerHTML]="content.title"></h1>
             <p [innerHTML]="content.description"></p>
             <p [innerHTML]="content.creator"></p>
-            <p [innerHTML]="content.type"></p>
+            <p [innerHTML]="content.type" appHoverAffect></p>
             <div *ngIf="content.imgURL; else noImage">
                 <img [src]="content.imgURL" (click)="logId(content)">
             </div>
@@ -52,7 +52,7 @@
             <h1 [innerHTML]="content.title"></h1>
             <p [innerHTML]="content.description"></p>
             <p [innerHTML]="content.creator"></p>
-            <p [innerHTML]="content.type"></p>
+            <p [innerHTML]="content.type" appHoverAffect ></p>
             <div *ngIf="content.imgURL; else noImage">
                 <img [src]="content.imgURL" (click)="logId(content)">
             </div>
