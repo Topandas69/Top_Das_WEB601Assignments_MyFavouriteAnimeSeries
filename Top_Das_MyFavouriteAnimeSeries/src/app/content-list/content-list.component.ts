@@ -42,7 +42,6 @@ export class ContentListComponent {
       title: "Naruto Shippuden",
       description: "Naruto, an adolescent ninja, dreams of becoming the Hokage in his village.",
       creator: "Masashi Kishimoto",
-      imgURL: "https://staticg.sportskeeda.com/editor/2021/10/fbfca-16355883548821-1920.jpg",
     },
     {
       id: 4,
@@ -64,7 +63,6 @@ export class ContentListComponent {
       title: "Death Note",
       description: "Death Note is a Japanese manga series written by Tsugumi Ohba and illustrated by Takeshi Obata. It was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from December 2003 to May 2006, with its 108 chapters collected in 12 tankōbon volumes. ",
       creator: "Shueisha",
-      imgURL: "https://static.wikia.nocookie.net/deathnote/images/7/76/DEATH_NOTE_anime.jpg/revision/latest?cb=20170720215429",
       type: "Thriller"
     },
     {
