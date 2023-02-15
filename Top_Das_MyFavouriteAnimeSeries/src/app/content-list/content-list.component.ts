@@ -28,6 +28,7 @@ export class ContentListComponent {
       description: "Dragon Ball Z follows the adventures of Goku who, along with the Z Warriors, defends the Earth against evil. The action adventures are entertaining and reinforce the concept of good versus evil. Dragon Ball Z teaches valuable character virtues such as teamwork, loyalty, and trustworthiness.",
       creator: "Akira Toriyama",
       imgURL: "https://images.alphacoders.com/605/605799.jpg",
+      tags: ['Dragon Ball', 'Anime', 'Action']
     },
     {
       id: 2,
@@ -42,6 +43,7 @@ export class ContentListComponent {
       title: "Naruto Shippuden",
       description: "Naruto, an adolescent ninja, dreams of becoming the Hokage in his village.",
       creator: "Masashi Kishimoto",
+      tags: ['Naruto', 'LifeStyle']
     },
     {
       id: 4,
@@ -63,7 +65,8 @@ export class ContentListComponent {
       title: "Death Note",
       description: "Death Note is a Japanese manga series written by Tsugumi Ohba and illustrated by Takeshi Obata. It was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from December 2003 to May 2006, with its 108 chapters collected in 12 tankōbon volumes. ",
       creator: "Shueisha",
-      type: "Thriller"
+      type: "Thriller",
+      tags: ['DeathNote', 'Horror']
     },
     {
       id: 7,
