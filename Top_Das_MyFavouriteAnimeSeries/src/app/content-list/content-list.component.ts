@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
 @Component({
@@ -18,6 +18,12 @@ export class ContentListComponent {
 
   searchByTitle(){
     this.isTitleExist = this.contentsArray.some(content => content.title === this.searchTitle);
+  }
+
+  addContent(newContent: Content){
+    this.contentsArray.push(newContent);
+    this.contentsArray = [...this.contentsArray];
+    console.log(`Content Added successfully, Title: ${newContent.title}`);
   }
 
   constructor(){
