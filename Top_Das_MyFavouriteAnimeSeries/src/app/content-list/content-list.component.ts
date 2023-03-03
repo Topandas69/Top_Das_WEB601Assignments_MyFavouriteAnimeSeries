@@ -10,6 +10,7 @@ export class ContentListComponent {
   contentsArray: Content[];
   searchTitle: string = '';
   isTitleExist: boolean | null = null;
+  errTxt: boolean = false;
 
   logId(getContent: any){
     console.log(`ID: ${getContent.id}`);
@@ -21,9 +22,19 @@ export class ContentListComponent {
   }
 
   addContent(newContent: Content){
-    this.contentsArray.push(newContent);
-    this.contentsArray = [...this.contentsArray];
-    console.log(`Content Added successfully, Title: ${newContent.title}`);
+    const AddPromise = new Promise((resolve, reject) => {
+      this.contentsArray.push(newContent);
+      this.contentsArray = [...this.contentsArray];
+      resolve(newContent.title);
+    });
+
+    AddPromise.then(data => {
+      console.log(`Content Added successfully with title: ${data}`);
+      this.errTxt = false;
+    }).catch(err => {
+      this.errTxt = true;
+    });
+    
   }
 
   constructor(){

@@ -1,4 +1,6 @@
 <app-create-content (onCreation)="addContent($event)"></app-create-content>
+
+<p class="errTxt" *ngIf="errTxt">Content Addition failed</p>
 <hr>
 <div>
     <input type="text" [(ngModel)]="searchTitle" placeholder="Search Title">
