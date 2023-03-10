@@ -12,5 +12,10 @@ export class AnimeSeriesService {
 
   getContent(): Observable<Content[]>{
     return of(contentsArray);
-  } 
+  }
+
+  getContentById(id: number): Observable<any> {
+    const content = contentsArray.find(c => c.id === id);
+    return of(content);
+  }
 }
