@@ -18,6 +18,7 @@ export class AnimeSeriesService {
 
   getContentById(id: number): Observable<any> {
     const content = contentsArray.find(c => c.id === id);
+    this.messageService.addMessage(`Content item at id: ${id}`);
     return of(content);
   }
 }

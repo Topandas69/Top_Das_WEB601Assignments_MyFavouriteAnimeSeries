@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AnimeSeriesService } from './services/anime-series.service';
-import { MessageService } from './services/message.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +12,7 @@ export class AppComponent {
   topContent: any = {};
 
   
-  constructor(private AnimeSeriesService: AnimeSeriesService, private messageService: MessageService){}
+  constructor(private AnimeSeriesService: AnimeSeriesService){}
 
   logId(){
     console.log(`ID: ${this.topContent.id}`);
@@ -22,6 +21,5 @@ export class AppComponent {
 
   ngOnInit(){
     this.AnimeSeriesService.getContentById(this.contentId).subscribe(content => this.topContent = content);
-    this.messageService.addMessage(`Content item at id: ${this.contentId}`);
   }
 }
