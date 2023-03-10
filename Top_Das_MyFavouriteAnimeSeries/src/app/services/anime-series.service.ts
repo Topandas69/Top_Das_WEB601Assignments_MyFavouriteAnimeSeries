@@ -2,15 +2,17 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Content } from '../helper-files/content-interface';
 import { contentsArray } from '../helper-files/contentDb';
+import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnimeSeriesService {
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   getContent(): Observable<Content[]>{
+    this.messageService.addMessage("Content array loaded!");
     return of(contentsArray);
   }
 
