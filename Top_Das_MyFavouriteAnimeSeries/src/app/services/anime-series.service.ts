@@ -10,6 +10,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AnimeSeriesService {
+  private httpOptions = {
+    headers: new HttpHeaders({ "Content-Type": "application/json"})
+  }
 
   constructor(private http:HttpClient,  private messageService: MessageService) { }
 
@@ -22,5 +25,10 @@ export class AnimeSeriesService {
     const content = contentsArray.find(c => c.id === id);
     this.messageService.addMessage(`Content item at id: ${id}`);
     return of(content);
+  }
+
+  addAnime(newAnime: Content){
+    this.messageService.addMessage(`New Anime Content added`);
+    return this.http.post<Content>("/api/animes", newAnime, this.httpOptions);
   }
 }

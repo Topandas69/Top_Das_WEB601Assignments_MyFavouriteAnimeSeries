@@ -27,4 +27,11 @@ export class ContentListComponent {
   ngOnInit(){
     this.AnimeSeriesService.getContent().subscribe(contentsArray => this.contentsArray = contentsArray);
   }
+
+  addContent(newAnime: Content){
+    this.AnimeSeriesService.addAnime(newAnime).subscribe(newAnimeBack => {
+      this.contentsArray.push(newAnimeBack);
+      this.contentsArray = [...this.contentsArray];
+    });
+  }
 }
