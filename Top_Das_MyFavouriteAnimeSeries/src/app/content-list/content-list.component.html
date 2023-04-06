@@ -1,8 +1,10 @@
 <app-modify-content (onCreation)="addContent($event)" ></app-modify-content>
 
 <div>
-    <input type="text" [(ngModel)]="searchTitle" placeholder="Search Title">
-    <button (click)="searchByTitle()">Search</button>
+    <mat-form-field>
+        <input matInput type="text" [(ngModel)]="searchTitle" placeholder="Search Title">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="searchByTitle()">Search</button>
 </div>
 <div *ngIf="isTitleExist !== null" >
     <p [style.color]="isTitleExist ? 'green': 'red'">
