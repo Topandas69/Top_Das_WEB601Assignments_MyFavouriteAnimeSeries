@@ -18,8 +18,10 @@ export class ModifyContentComponent {
   openDialog():void{
     const dialogRef = this.dialog.open(AddContentDialogComponent);
     dialogRef.afterClosed().subscribe(result => {
-      this.newContent = result;
-      this.addContent();
+      if (result){
+        this.newContent = result;
+        this.addContent();
+      }
     });
   }
   addContent(){

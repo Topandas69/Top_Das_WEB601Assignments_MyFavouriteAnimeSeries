@@ -1,19 +1,23 @@
 <div class="topContent">
-    <div class="c-card">
-        <h1 [innerHTML]="topContent.title"></h1>
-        <p [innerHTML]="topContent.description"></p>
-        <p [innerHTML]="topContent.creator"></p>
-        <p [innerHTML]="topContent.type" appHoverAffect [styleOnHover]="'underline'"></p>
-        <div>
-            <span *ngFor="let tag of topContent.tags" appHoverAffect [styleOnTags]="'bold'">{{tag}}, </span>
-        </div>
-        <div *ngIf="topContent.imgURL; else noImage">
-            <img [src]="topContent.imgURL" (click)="logId()">
-        </div>
-        <ng-template #noImage>
-            <img src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId()">
-        </ng-template>
-    </div>
+    <mat-card class="c-card">
+        <mat-card-header>
+            <h1 [innerHTML]="topContent.title"></h1>
+        </mat-card-header>
+        <mat-card-content>
+            <p [innerHTML]="topContent.description"></p>
+            <p [innerHTML]="topContent.creator"></p>
+            <p [innerHTML]="topContent.type" appHoverAffect [styleOnHover]="'underline'"></p>
+            <div>
+                <span *ngFor="let tag of topContent.tags" appHoverAffect [styleOnTags]="'bold'">{{tag}}, </span>
+            </div>
+            <div *ngIf="topContent.imgURL; else noImage">
+                <img [src]="topContent.imgURL" (click)="logId()">
+            </div>
+            <ng-template #noImage>
+                <img mat-card-image src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId()">
+            </ng-template>
+        </mat-card-content>
+    </mat-card>
 </div>
 
 <hr>

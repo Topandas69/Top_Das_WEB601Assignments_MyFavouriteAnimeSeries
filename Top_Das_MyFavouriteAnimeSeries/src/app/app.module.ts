@@ -17,6 +17,7 @@ import { ModifyContentComponent } from './modify-content/modify-content.componen
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 import { AddContentDialogComponent } from './add-content-dialog/add-content-dialog.component';
 
 @NgModule({
@@ -38,6 +39,7 @@ import { AddContentDialogComponent } from './add-content-dialog/add-content-dial
     MatButtonModule,
     MatInputModule,
     MatDialogModule,
+    MatCardModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
       delay: 1000

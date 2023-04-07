@@ -16,62 +16,74 @@
 <div class="no-type">
     <h1>No Type</h1>
     <div *ngFor="let content of contentsArray | contentType">
-        <div class="c-card">
-            <h1 [innerHTML]="content.title"></h1>
-            <p [innerHTML]="content.description"></p>
-            <p [innerHTML]="content.creator"></p>
-            <p [innerHTML]="content.type" appHoverAffect [styleOnHover]="'underline'"></p>
-            <div>
-                <span *ngFor="let tag of content.tags" appHoverAffect [styleOnTags]="'bold'">{{tag}}, </span>
-            </div>
-            <div *ngIf="content.imgURL; else noImage">
-                <img [src]="content.imgURL" (click)="logId(content)">
-            </div>
-            <ng-template #noImage>
-                <img src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId(content)">
-            </ng-template>
-        </div>
+        <mat-card class="c-card">
+            <mat-card-header>
+                <h1 [innerHTML]="content.title"></h1>
+            </mat-card-header>
+            <mat-card-content>
+                <p [innerHTML]="content.description"></p>
+                <p [innerHTML]="content.creator"></p>
+                <p [innerHTML]="content.type" appHoverAffect [styleOnHover]="'underline'"></p>
+                <div>
+                    <span *ngFor="let tag of content.tags" appHoverAffect [styleOnTags]="'bold'">{{tag}}, </span>
+                </div>
+                <div *ngIf="content.imgURL; else noImage">
+                    <img [src]="content.imgURL" (click)="logId(content)">
+                </div>
+                <ng-template #noImage>
+                    <img mat-card-image src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId(content)">
+                </ng-template>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
 
 <div class="action-type">
     <h1>Action Type</h1>
     <div *ngFor="let content of contentsArray | contentType:'Action'">
-        <div class="c-card">
-            <h1 [innerHTML]="content.title"></h1>
-            <p [innerHTML]="content.description"></p>
-            <p [innerHTML]="content.creator"></p>
-            <p [innerHTML]="content.type" appHoverAffect [styleOnHover]="'underline'"></p>
-            <div>
-                <span *ngFor="let tag of content.tags" appHoverAffect [styleOnTags]="'bold'">{{tag}}, </span>
-            </div>
-            <div *ngIf="content.imgURL; else noImage">
-                <img [src]="content.imgURL" (click)="logId(content)">
-            </div>
-            <ng-template #noImage>
-                <img src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId(content)">
-            </ng-template>
-        </div>
+        <mat-card class="c-card">
+            <mat-card-header>
+                <h1 [innerHTML]="content.title"></h1>
+            </mat-card-header>
+            <mat-card-content>
+                <p [innerHTML]="content.description"></p>
+                <p [innerHTML]="content.creator"></p>
+                <p [innerHTML]="content.type" appHoverAffect [styleOnHover]="'underline'"></p>
+                <div>
+                    <span *ngFor="let tag of content.tags" appHoverAffect [styleOnTags]="'bold'">{{tag}}, </span>
+                </div>
+                <div *ngIf="content.imgURL; else noImage">
+                    <img [src]="content.imgURL" (click)="logId(content)">
+                </div>
+                <ng-template #noImage>
+                    <img mat-card-image src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId(content)">
+                </ng-template>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
 
 <div class="thriller-type">
     <h1>Thriller Type</h1>
     <div *ngFor="let content of contentsArray | contentType:'Thriller'">
-        <div class="c-card">
-            <h1 [innerHTML]="content.title"></h1>
-            <p [innerHTML]="content.description"></p>
-            <p [innerHTML]="content.creator"></p>
-            <p [innerHTML]="content.type" appHoverAffect [styleOnHover]="'underline'"></p>
-            <div>
-                <span *ngFor="let tag of content.tags" appHoverAffect [styleOnTags]="'bold'">{{tag}}, </span>
-            </div>
-            <div *ngIf="content.imgURL; else noImage">
-                <img [src]="content.imgURL" (click)="logId(content)">
-            </div>
-            <ng-template #noImage>
-                <img src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId(content)">
-            </ng-template>
-        </div>
+        <mat-card class="c-card">
+            <mat-card-header>
+                <h1 [innerHTML]="content.title"></h1>
+            </mat-card-header>
+            <mat-card-content>
+                <p [innerHTML]="content.description"></p>
+                <p [innerHTML]="content.creator"></p>
+                <p [innerHTML]="content.type" appHoverAffect [styleOnHover]="'underline'"></p>
+                <div>
+                    <span *ngFor="let tag of content.tags" appHoverAffect [styleOnTags]="'bold'">{{tag}}, </span>
+                </div>
+                <div *ngIf="content.imgURL; else noImage">
+                    <img [src]="content.imgURL" (click)="logId(content)">
+                </div>
+                <ng-template #noImage>
+                    <img mat-card-image src="https://e1.pxfuel.com/desktop-wallpaper/231/267/desktop-wallpaper-unique-emo-anime-character-sketches-vector-file-vector-art-graphics-clipart-anime-character-drawing.jpg" (click)="logId(content)">
+                </ng-template>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
