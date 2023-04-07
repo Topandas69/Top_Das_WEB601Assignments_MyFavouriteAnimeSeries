@@ -16,6 +16,8 @@ import { ModifyContentComponent } from './modify-content/modify-content.componen
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddContentDialogComponent } from './add-content-dialog/add-content-dialog.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,17 @@ import {MatInputModule} from '@angular/material/input';
     ContentTypePipe,
     HoverAffectDirective,
     MessagesComponent,
-    ModifyContentComponent
+    ModifyContentComponent,
+    AddContentDialogComponent
   ],
+  entryComponents: [AddContentDialogComponent],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     MatButtonModule,
     MatInputModule,
+    MatDialogModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
       delay: 1000

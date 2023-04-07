@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>Add Anime series</h1>
+<mat-dialog-content>
+
+    <div class="p-4">
+        Id: <br> 
+        <mat-form-field>
+            <input matInput type="text" disabled>
+        </mat-form-field>
+        <br> <br>
+        Title: <br> 
+        <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.title">
+        </mat-form-field>
+        <br> <br>
+        Description: <br> 
+        <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.description">
+        </mat-form-field>
+        <br> <br>
+        Creator: <br> 
+        <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.creator"> 
+        </mat-form-field>
+        <br> <br>
+        Image Link: <br> 
+        <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.imgURL"> 
+        </mat-form-field>
+        <br> <br>
+        Type: <br> 
+        <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.type"> 
+        </mat-form-field>
+        <br> <br>
+
+        <mat-dialog-actions>
+            <div>
+                <button mat-raised-button color="warn" (click)="closeDialog()">Cancle</button>
+                <button mat-raised-button color="primary" (click)="addContent()">Add Content</button>
+            </div>
+        </mat-dialog-actions>
+    </div>
+        
+</mat-dialog-content>
