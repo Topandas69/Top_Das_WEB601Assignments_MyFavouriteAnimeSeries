@@ -22,6 +22,10 @@ import {MatDividerModule} from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { AddContentDialogComponent } from './add-content-dialog/add-content-dialog.component';
 
+import { AppRoutingModule } from './app-routing.module';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +35,9 @@ import { AddContentDialogComponent } from './add-content-dialog/add-content-dial
     HoverAffectDirective,
     MessagesComponent,
     ModifyContentComponent,
-    AddContentDialogComponent
+    AddContentDialogComponent,
+    ContentDetailComponent,
+    PageNotFoundComponent
   ],
   entryComponents: [AddContentDialogComponent],
   imports: [
@@ -44,6 +50,7 @@ import { AddContentDialogComponent } from './add-content-dialog/add-content-dial
     MatDialogModule,
     MatIconModule,
     MatCardModule,
+    AppRoutingModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
       delay: 1000

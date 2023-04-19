@@ -18,10 +18,11 @@
     <div *ngFor="let content of contentsArray | contentType">
         <mat-card class="c-card">
             <mat-card-header>
-                <h1 [innerHTML]="content.title"></h1>
+                <a routerLink="/contents/{{content.id}}">
+                    <h1 [innerHTML]="content.title"></h1>
+                </a>
             </mat-card-header>
             <mat-card-content>
-                <p [innerHTML]="content.description"></p>
                 <p [innerHTML]="content.creator"></p>
                 <p [innerHTML]="content.type" appHoverAffect [styleOnHover]="'underline'"></p>
                 <div>
@@ -43,10 +44,11 @@
     <div *ngFor="let content of contentsArray | contentType:'Action'">
         <mat-card class="c-card">
             <mat-card-header>
-                <h1 [innerHTML]="content.title"></h1>
+                <a routerLink="/contents/{{content.id}}">
+                    <h1 [innerHTML]="content.title"></h1>
+                </a>
             </mat-card-header>
             <mat-card-content>
-                <p [innerHTML]="content.description"></p>
                 <p [innerHTML]="content.creator"></p>
                 <p [innerHTML]="content.type" appHoverAffect [styleOnHover]="'underline'"></p>
                 <div>
@@ -68,10 +70,11 @@
     <div *ngFor="let content of contentsArray | contentType:'Thriller'">
         <mat-card class="c-card">
             <mat-card-header>
-                <h1 [innerHTML]="content.title"></h1>
+                <a routerLink="/contents/{{content.id}}">
+                    <h1 [innerHTML]="content.title"></h1>
+                </a>
             </mat-card-header>
             <mat-card-content>
-                <p [innerHTML]="content.description"></p>
                 <p [innerHTML]="content.creator"></p>
                 <p [innerHTML]="content.type" appHoverAffect [styleOnHover]="'underline'"></p>
                 <div>
